@@ -2,10 +2,13 @@ FROM node:6-alpine
 
 RUN apk add --update alpine-sdk python-dev
 
+COPY exec.sh /exec.sh
+RUN chmod +x /exec.sh
+
 RUN npm install npm@4 -g
 RUN npm install node-gyp -g
 RUN node-gyp install
 
-WORKINGDIR /usr/src/app
+WORKDIR /usr/src/app
 
-CMD ["node-gyp", "rebuild"]
+CMD ["/exec.sh"]
