@@ -2,6 +2,8 @@
 
 Node alpine container for building stuff (when on windows)
 
+![console](https://github.com/pocesar/docker-node-alpine-gyp/blob/master/argon2.png)
+
 # Usage
 
 ```
