@@ -1,4 +1,4 @@
-FROM node:6-alpine
+FROM node:7-alpine
 
 RUN apk add --update alpine-sdk python-dev
 
