@@ -1,6 +1,13 @@
 # docker-node-alpine-gyp
 
-Node alpine container for building stuff (when on windows)
+Node alpine container for rebuilding stuff (when on windows host)
+
+# Why?
+
+When you `npm install` some module that has native bindings, it'll install the host version of the module.
+This container helps with overwriting usually the `build` directory with a node alpine compatible native module.
+
+In the example is argon2, if you try to use Windows Host and Docker Machine, it's a no-go
 
 ![console](https://github.com/pocesar/docker-node-alpine-gyp/blob/master/argon2.png)
 
